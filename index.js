@@ -8,7 +8,7 @@ module.exports = {
       let $ = cheerio.load(page.content);
       $('head').append(
         $(
-          '<style>li.todo > p {display: inline-block} li.todo { list-style: none}</style>'
+          '<style>li.task { list-style: none } li.task > p { display: inline-block; } input[type=checkbox].task { margin: 0 .2em .25em -1.6em; }</style>'
         )
       );
       let $uls = $('ul');
@@ -28,7 +28,7 @@ function replaceDo(str) {
   if (regex.test(str) === false) return str;
   const replacedStr = str.replace(regex, (...matched) => {
     return (
-      '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" disabled/>' +
+      '<li class="task"><input type="checkbox" class="task" disabled/>' +
       matched[1].replace(/\s?\[ \]\s?/, '') +
       '</li>'
     );
@@ -41,7 +41,7 @@ function replaceDone(str) {
   if (regex.test(str) === false) return str;
   const replacedStr = str.replace(regex, (...matched) => {
     return (
-      '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" checked disabled/>' +
+      '<li class="task"><input type="checkbox" class="task" checked disabled/>' +
       matched[1].replace(/\s?\[x\]\s?/, '') +
       '</li>'
     );
