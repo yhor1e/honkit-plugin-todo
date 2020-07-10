@@ -24,31 +24,27 @@ module.exports = {
 };
 
 function replaceDo(str) {
-  if (/(<li>)((<p>)?\s?\[ \].*)(<\/li>)/s.test(str) === false) return str;
-  const replacedStr = str.replace(
-    /(<li>)((<p>)?\s?\[ \].*)(<\/li>)/s,
-    (...matched) => {
-      return (
-        '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" disabled/>' +
-        matched[2].replace(/(\s)?\[ \](\s)?/, '') +
-        '</li>'
-      );
-    }
-  );
+  const regex = /<li>((<p>)?\s?\[ \].*)<\/li>/s;
+  if (regex.test(str) === false) return str;
+  const replacedStr = str.replace(regex, (...matched) => {
+    return (
+      '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" disabled/>' +
+      matched[1].replace(/\s?\[ \]\s?/, '') +
+      '</li>'
+    );
+  });
   return replaceDo(replacedStr);
 }
 
 function replaceDone(str) {
-  if (/(<li>)((<p>)?\s?\[x\].*)(<\/li>)/s.test(str) === false) return str;
-  const replacedStr = str.replace(
-    /(<li>)((<p>)?\s?\[x\].*)(<\/li>)/s,
-    (...matched) => {
-      return (
-        '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" checked disabled/>' +
-        matched[2].replace(/(\s)?\[x\](\s)?/, '') +
-        '</li>'
-      );
-    }
-  );
+  const regex = /<li>((<p>)?\s?\[x\].*)<\/li>/s;
+  if (regex.test(str) === false) return str;
+  const replacedStr = str.replace(regex, (...matched) => {
+    return (
+      '<li class="todo"><input style="margin: 0 .2em .25em -1.6em;" type="checkbox" checked disabled/>' +
+      matched[1].replace(/\s?\[x\]\s?/, '') +
+      '</li>'
+    );
+  });
   return replaceDone(replacedStr);
 }
