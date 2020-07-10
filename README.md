@@ -1,8 +1,8 @@
 # honkit-plugin-todo
 
-This is HonKit todo plugin.
+This is [HonKit](https://github.com/honkit/honkit) todo plugin.
 
-_markdown_
+This markdown will be
 
 ```
 - [x] todo1
@@ -12,15 +12,19 @@ _markdown_
 - [ ] todo3
 ```
 
-_honkit_
+HTML like [GFM Task list items](https://github.github.com/gfm/#task-list-items-extension-).
 
 ![picture of todo on html](./after.png)
 
 ## usage
 
+### install
+
 ```
 $ npm install -D honkit-plugin-todo
 ```
+
+### setting
 
 `book.json`
 
@@ -29,3 +33,5 @@ $ npm install -D honkit-plugin-todo
   "plugins": ["todo"]
 }
 ```
+
+If you don't have `book.json`, please read [HonKit Directory Structure](https://honkit.netlify.app/structure.html) and [HonKit Configuration](https://honkit.netlify.app/config.html).
