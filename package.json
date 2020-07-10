@@ -9,7 +9,8 @@
   "keywords": [
     "honkit",
     "plugin",
-    "todo"
+    "todo",
+    "task"
   ],
   "files": [
     "index.js"
