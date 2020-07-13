@@ -1,18 +1,13 @@
 {
   "env": {
-    "browser": true,
     "node": true,
-    "commonjs": true,
-    "es6": true
+    "commonjs": true
   },
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
-  "extends": ["eslint:recommended" /*, "google"*/],
+  "extends": ["eslint:recommended"],
   "rules": {
     "semi": ["error", "always"]
   }
