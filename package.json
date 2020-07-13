@@ -13,7 +13,8 @@
     "task"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "lib"
   ],
   "author": "yhor1e",
   "license": "MIT",
