@@ -21,10 +21,10 @@
   "author": "yhor1e",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.5"
   },
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^26.6.3"
   },
   "scripts": {
     "test": "jest"
