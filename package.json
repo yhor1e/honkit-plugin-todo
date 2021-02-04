@@ -8,13 +8,15 @@
   "main": "index.js",
   "keywords": [
     "honkit",
+    "gitbook",
     "plugin",
     "todo",
     "task"
   ],
   "files": [
     "index.js",
-    "lib"
+    "lib",
+    "css"
   ],
   "author": "yhor1e",
   "license": "MIT",
