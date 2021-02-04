@@ -1,6 +1,6 @@
 {
   "name": "honkit-plugin-todo",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "This is HonKit todo plugin",
   "engines": {
     "honkit": ">=3.5.0"
@@ -8,21 +8,23 @@
   "main": "index.js",
   "keywords": [
     "honkit",
+    "gitbook",
     "plugin",
     "todo",
     "task"
   ],
   "files": [
     "index.js",
-    "lib"
+    "lib",
+    "css"
   ],
   "author": "yhor1e",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.5"
   },
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^26.6.3"
   },
   "scripts": {
     "test": "jest"
